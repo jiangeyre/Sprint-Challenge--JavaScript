@@ -21,11 +21,11 @@ class CubeMaker extends CuboidMaker2 { //cubes have equal height width and lengt
         this.sideMeasure = cubeAttr.sideMeasure
     }
     volumeCube() {
-        return this.sideMeasure * this.sideMeasure * this.sideMeasure;
+        return Math.pow(this.sideMeasure, 3);
     }
 
     surfaceAreaCube() {
-        return 6 * (this.sideMeasure * this.sideMeasure);
+        return 6 * (Math.pow(this.sideMeasure, 2));
     }
 
 }
@@ -36,13 +36,22 @@ const cuboid = new CuboidMaker2 ({
     height: 5
 })
 
+const cuboid666 = new CuboidMaker2 ({
+    length: 6,
+    width: 6,
+    height: 6
+})
+
 const cube = new CubeMaker ({
-    sideMeasure: 6
+   sideMeasure: 6
 })
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
+
+console.log(cuboid666.volume());
+console.log(cuboid666.surfaceArea()); //literally the same as my new class extension for a cube
 
 console.log(cube.volumeCube());
 console.log(cube.surfaceAreaCube());
