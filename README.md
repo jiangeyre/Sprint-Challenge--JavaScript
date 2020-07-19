@@ -30,13 +30,34 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+forEach() = executes the provided function once for each array element / does not actualy return anything as it simply calls the provided function
+map() = creates a whole new array with the results of calling a provided function on every element in the calling array / utilizes return values and returns a new Array of the same size
+
+
 2. What is the difference between a function and a method?
+method = a function that belongs to an object
+
+A function returns a value; function is something that takes a bunch of inputs and returns one or more value. A method is similar but internal to a class (used in OOP - object oriented programming).
 
 3. What is closure?
 
+A closure is created when the inner function is somehow made available to any scope outside the outer function. Closure is function bundled together (enclosed) wtih references tol its lexical environment (surrounding state)/ Closure gives access to an outer function's scope from an inner function.
+
 4. Describe the four rules of the 'this' keyword.
 
+    1. GLOBAL/WINDOW BINDING: If none of the other rules apply, the 'this' keyword defaults to the window object. Unless you are in strict mode, then the case is undefined. Strict mode prevents window binding from breaking our code but will return undefined.
+    2. IMPLICIT BINDING: This is the most common binding (80% of all cases). When the function is invoked, you look to the left of the dot - that's what the 'this' keyword is referring to (only applies to objects with methods).
+    3. NEW BINDING: using the 'new' keyword constructs a new object and this points to it
+    4. EXPLICIT BINDING:
+        -call: will immediately invoke the function / ,call passes arguments in one by one
+        -apply: will immediately invoke the function / .apply passes the argument in as an array
+        -bind: you pass arguments in one by one but it does not immediately invoke the function; it returns a brand new function that can be invoked later.
+        ALL of the above allow us to explicitly state what the 'this' keyword is in any given function.
+
 5. Why do we need super() in an extended class?
+
+The super() is used to call the constructor, methods and properties of parent class. You can use super() in sub classes when you want to invoke a method from the parents class when you have already overridden it in the subclasses.
+
 
 ## Project Set up
 
